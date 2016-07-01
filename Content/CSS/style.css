@@ -17,3 +17,10 @@ div.contact {
 .hidden {
   display: none;
 }
+
+#addGroup {
+  font-size: .5rem;
+  color: #aab;
+  font-style: italic;
+  text-decoration: underline;
+}
