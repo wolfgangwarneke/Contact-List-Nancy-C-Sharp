@@ -45,6 +45,10 @@ namespace ContactList
         Display newDisplay = new Display();
         return View["contacts.cshtml", newDisplay];
       };
+      // Post["/addGroup"] = _ => {
+      //   Group.AddDefinedGroup(Request.Form["newGroup"]);
+      //   return true;
+      // };
 
     }
   }

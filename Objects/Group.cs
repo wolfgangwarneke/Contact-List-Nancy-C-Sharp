@@ -16,5 +16,9 @@ namespace ContactList.Objects
       }
       return HTML;
     }
+    public static void AddDefinedGroup(string groupName)
+    {
+      _definedGroups.Add(groupName);
+    }
   }
 }

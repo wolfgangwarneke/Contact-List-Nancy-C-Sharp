@@ -1,12 +1,14 @@
 <html>
   <head>
     <link rel="stylesheet" href="/Content/CSS/style.css" type="text/CSS">
+    <script src="/Content/JS/jquery-3.0.0.min.js"></script>
   </head>
   <body>
     @Html.Raw(Model.GetHeaderHTML())
     @Html.Raw(Model.GetContactsHTML())
     <a href="/goToForm">Add Contact</a>
     <a href="/clear">Remove All Contacts</a>
+
 
     <script src="/Content/JS/scripts.js"></script>
   </body>

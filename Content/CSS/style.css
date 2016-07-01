@@ -13,3 +13,7 @@ div.contact {
 #addContactForm input {
   background-color: #dfddf4;
 }
+
+.hidden {
+  display: none;
+}

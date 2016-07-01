@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="/Content/CSS/style.css" type="text/CSS">
+    <script src="/Content/JS/jquery-3.0.0.min.js"></script>
   </head>
   <body>
     @Html.Raw(Model.GetHeaderHTML())
@@ -19,13 +20,21 @@
       <input type="text" name="company" id="company"></input>
       <label for=""></label>
       <input type="text" name="" id=""></input>
-      <select name="group">
+      <select name="group" id="group">
         @Html.Raw(Model.GetGroupOptionsHTML())
       </select>
-      @*<button type="button" id="addgroup">Add group</button>*@
+      <span type="button" id="addGroup">Add group</span>
       <button type="submit">Add Contact</button>
     </form>
     <a href="/clear">Remove All Contacts</a>
+
+    <form id="newGroupForm" class="hidden">
+      <label for="newGroup">New group name:</label>
+      <input type="text" name="newGroup" id="newGroup">
+      <button type="submit">Add group</button>
+    </form>
+
+
 
     <script src="/Content/JS/scripts.js"></script>
   </body>
