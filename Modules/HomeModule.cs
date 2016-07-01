@@ -25,7 +25,8 @@ namespace ContactList
           Request.Form["firstName"],
           Request.Form["lastName"],
           Request.Form["phoneNumber"],
-          Request.Form["email"]
+          Request.Form["email"],
+          Request.Form["address"]
           );
         Contact newContact = new Contact(newInput.GetFormFields());
         List<Contact> allContacts = Contact.GetAllContacts();
