@@ -8,17 +8,16 @@ namespace ContactList.Objects
     private static List<Contact> _allContacts = new List<Contact> {};
     private Dictionary<string, string> _contactData = new Dictionary<string, string>();
 
-    private Name _name;
+    //name
     //phone number
     //email
     //address
-    private string _company;
+    //company
     //group
     //birthday
 
     public Contact (Dictionary<string, string> fieldList)
     {
-      _name = new Name(fieldList["firstName"], fieldList["lastName"]);
       _contactData = fieldList;
       _allContacts.Add(this);
     }
