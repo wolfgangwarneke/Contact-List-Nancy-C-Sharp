@@ -18,8 +18,9 @@ namespace ContactList.Objects
 
     public Contact (Dictionary<string, string> fieldList)
     {
-      _contactData = fieldList;
-      _allContacts.Add(this);
+        _contactData = fieldList;
+        _allContacts.Add(this);
+
     }
 
     public void AddContact(Contact contactToAdd)
@@ -41,6 +42,8 @@ namespace ContactList.Objects
     {
       _allContacts.Clear();
     }
+
+
 
   }
 }

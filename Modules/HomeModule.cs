@@ -10,15 +10,18 @@ namespace ContactList
     {
       Get["/"] = _ => {
         List<Contact> allContacts = Contact.GetAllContacts();
-        return View["index.cshtml", allContacts];
+        Display newDisplay = new Display(allContacts);
+        return View["index.cshtml", newDisplay];
       };
       Get["/viewContacts"] = _ => {
         List<Contact> allContacts = Contact.GetAllContacts();
-        return View["index.cshtml", allContacts];
+        Display newDisplay = new Display(allContacts);
+        return View["index.cshtml", newDisplay];
       };
       Get["/goToForm"] = _ => {
         List<Contact> allContacts = Contact.GetAllContacts();
-        return View["addcontact.cshtml", allContacts];
+        Display newDisplay = new Display(allContacts);
+        return View["addcontact.cshtml", newDisplay];
       };
       Post["/addContact"] = _ => {
         AddContactFormInput newInput = new AddContactFormInput(
@@ -31,12 +34,14 @@ namespace ContactList
           );
         Contact newContact = new Contact(newInput.GetFormFields());
         List<Contact> allContacts = Contact.GetAllContacts();
-        return View["contacts.cshtml", allContacts];
+        Display newDisplay = new Display(allContacts);
+        return View["contacts.cshtml", newDisplay];
       };
       Get["/clear"] = _ => {
         Contact.RemoveAllContacts();
         List<Contact> allContacts = Contact.GetAllContacts();
-        return View["contacts.cshtml", allContacts];
+        Display newDisplay = new Display(allContacts);
+        return View["contacts.cshtml", newDisplay];
       };
     }
   }
