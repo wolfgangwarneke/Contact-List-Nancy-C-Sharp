@@ -1,6 +1,9 @@
-<ul>
+
   @foreach (var contact in Model) {
-    <li>@contact.GetField("firstName") @contact.GetField("lastName")</li>
+    <div>
+      <h1>@contact.GetField("firstName") @contact.GetField("lastName")</h1>
+      <h2>Phone @contact.GetField("phoneNumber")</h2>
+    </div>
   }
-</ul>
+
 <a href="/goToForm">Add Contact</a>

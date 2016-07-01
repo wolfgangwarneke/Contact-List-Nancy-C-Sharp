@@ -21,7 +21,7 @@ namespace ContactList
         return View["addcontact.cshtml", allContacts];
       };
       Post["/addContact"] = _ => {
-        AddContactFormInput newInput = new AddContactFormInput(Request.Form["firstName"], Request.Form["lastName"]);
+        AddContactFormInput newInput = new AddContactFormInput(Request.Form["firstName"], Request.Form["lastName"], Request.Form["phoneNumber"]);
         Contact newContact = new Contact(newInput.GetFormFields());
         List<Contact> allContacts = Contact.GetAllContacts();
         return View["contacts.cshtml", allContacts];

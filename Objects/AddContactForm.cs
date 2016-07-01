@@ -8,10 +8,11 @@ namespace ContactList.Objects
     private Dictionary<string, string> _formFields = new Dictionary<string, string>();
     private string _fullName;
 
-    public AddContactFormInput(string first, string last)
+    public AddContactFormInput(string first, string last, string phone)
     {
       _formFields.Add("firstName", first);
       _formFields.Add("lastName", last);
+      _formFields.Add("phoneNumber", phone);
     }
 
     public Dictionary<string, string> GetFormFields()
