@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace ContactList.Objects
 {
-  public class Contact
+  public class Signup
   {
 
   }

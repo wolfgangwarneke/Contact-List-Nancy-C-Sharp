@@ -9,6 +9,16 @@ namespace ContactList.Objects
     private string _lastName;
     private string _fullName;
 
-    public void SetFirstName
+    public Name(string first, string last)
+    {
+      _firstName = first;
+      _lastName = last;
+      _fullName = first + " " + last;
+    }
+
+    public string GetFullName()
+    {
+      return _fullName;
+    }
   }
 }
