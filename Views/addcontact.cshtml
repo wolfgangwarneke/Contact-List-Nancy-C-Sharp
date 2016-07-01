@@ -19,6 +19,10 @@
       <input type="text" name="company" id="company"></input>
       <label for=""></label>
       <input type="text" name="" id=""></input>
+      <select name="group">
+        @Html.Raw(Model.GetGroupOptionsHTML())
+      </select>
+      @*<button type="button" id="addgroup">Add group</button>*@
       <button type="submit">Add Contact</button>
     </form>
     <a href="/clear">Remove All Contacts</a>

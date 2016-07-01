@@ -31,7 +31,8 @@ namespace ContactList
           Request.Form["phoneNumber"],
           Request.Form["email"],
           Request.Form["address"],
-          Request.Form["company"]
+          Request.Form["company"],
+          Request.Form["group"]
           );
         Contact newContact = new Contact(newInput.GetFormFields());
         List<Contact> allContacts = Contact.GetAllContacts();
@@ -44,6 +45,7 @@ namespace ContactList
         Display newDisplay = new Display();
         return View["contacts.cshtml", newDisplay];
       };
+
     }
   }
 }

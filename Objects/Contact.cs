@@ -49,6 +49,7 @@ namespace ContactList.Objects
       foreach (Contact contact in _allContacts) {
         HTML += "<div class='contact'>";
         HTML += "<h1>" + contact.GetField("firstName") + " " + contact.GetField("lastName") + "</h1>";
+        HTML += "<h4>" + contact.GetField("group") + "</h4>";
         HTML += "<h2>" + contact.GetField("phoneNumber") + "</h2>";
         HTML += "<h2>" + contact.GetField("email") + "</h2>";
         HTML += "<h2>" + contact.GetField("address") + "</h2>";
