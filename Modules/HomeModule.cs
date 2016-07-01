@@ -1,5 +1,6 @@
 using Nancy;
 using ContactList.Objects;
+using PageDisplay;
 using System.Collections.Generic;
 
 namespace ContactList
@@ -10,17 +11,17 @@ namespace ContactList
     {
       Get["/"] = _ => {
         List<Contact> allContacts = Contact.GetAllContacts();
-        Display newDisplay = new Display(allContacts);
+        Display newDisplay = new Display();
         return View["index.cshtml", newDisplay];
       };
       Get["/viewContacts"] = _ => {
         List<Contact> allContacts = Contact.GetAllContacts();
-        Display newDisplay = new Display(allContacts);
+        Display newDisplay = new Display();
         return View["index.cshtml", newDisplay];
       };
       Get["/goToForm"] = _ => {
         List<Contact> allContacts = Contact.GetAllContacts();
-        Display newDisplay = new Display(allContacts);
+        Display newDisplay = new Display();
         return View["addcontact.cshtml", newDisplay];
       };
       Post["/addContact"] = _ => {
@@ -34,13 +35,13 @@ namespace ContactList
           );
         Contact newContact = new Contact(newInput.GetFormFields());
         List<Contact> allContacts = Contact.GetAllContacts();
-        Display newDisplay = new Display(allContacts);
+        Display newDisplay = new Display();
         return View["contacts.cshtml", newDisplay];
       };
       Get["/clear"] = _ => {
         Contact.RemoveAllContacts();
         List<Contact> allContacts = Contact.GetAllContacts();
-        Display newDisplay = new Display(allContacts);
+        Display newDisplay = new Display();
         return View["contacts.cshtml", newDisplay];
       };
     }

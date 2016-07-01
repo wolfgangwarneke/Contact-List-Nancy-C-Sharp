@@ -1,23 +1,32 @@
 using System.Collections.Generic;
 using System.Threading;
+using ContactList.Objects;
 
-namespace ContactList.Objects
+namespace PageDisplay
 {
   public class Display
   {
-        private List<Contact> _contactsToDisplay = new List<Contact> {};
         private string _headerHTML;
+        private string _contactsHTML;
 
-        public Display(List<Contact> contacts)
+        public Display()
         {
-          _contactsToDisplay = contacts;
           _headerHTML = Header.GetHTML();
+          _contactsHTML = Contact.GetHTML();
         }
 
         public string GetHeaderHTML()
         {
           return _headerHTML;
         }
+
+        public string GetContactsHTML()
+        {
+          return _contactsHTML;
+        }
+
+
+
 
   }
 }

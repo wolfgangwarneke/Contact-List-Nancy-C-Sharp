@@ -43,7 +43,14 @@ namespace ContactList.Objects
       _allContacts.Clear();
     }
 
-
-
+    public static string GetHTML()
+    {
+      string HTML = "<div>";
+      foreach (Contact contact in _allContacts) {
+        HTML += "<h1>" + contact.GetField("firstName") + " " + contact.GetField("lastName") + "</h1>";
+      }
+      HTML += "</div>";
+      return HTML;
+    }
   }
 }

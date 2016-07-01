@@ -1,4 +1,6 @@
-
+@Html.Raw(Model.GetHeaderHTML())
+@Html.Raw(Model.GetContactsHTML())
+@*
   @foreach (var contact in Model) {
     <div>
       <h1>@contact.GetField("firstName") @contact.GetField("lastName")</h1>
@@ -8,6 +10,6 @@
       <h2>Company: @contact.GetField("company")</h2>
     </div>
   }
-
+*@
 <a href="/goToForm">Add Contact</a>
 <a href="/clear">Remove All Contacts</a>
