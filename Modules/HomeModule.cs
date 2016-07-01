@@ -17,7 +17,7 @@ namespace ContactList
       Get["/viewContacts"] = _ => {
         List<Contact> allContacts = Contact.GetAllContacts();
         Display newDisplay = new Display();
-        return View["index.cshtml", newDisplay];
+        return View["contacts.cshtml", newDisplay];
       };
       Get["/goToForm"] = _ => {
         List<Contact> allContacts = Contact.GetAllContacts();

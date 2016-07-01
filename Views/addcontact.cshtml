@@ -1,17 +1,28 @@
-<form action="/addContact" method="post">
-  <label for="firstName">First Name</label>
-  <input type="text" name="firstName" id="firstName"></input>
-  <label for="lastName">Last Name</label>
-  <input type="text" name="lastName" id="lastName"></input>
-  <label for="phoneNumber">Phone</label>
-  <input type="text" name="phoneNumber" id="phoneNumber"></input>
-  <label for="email">Email</label>
-  <input type="text" name="email" id="email"></input>
-  <label for="address">Address</label>
-  <input type="text" name="address" id="address"></input>
-  <label for="company">Company/Organization</label>
-  <input type="text" name="company" id="company"></input>
-  <label for=""></label>
-  <input type="text" name="" id=""></input>
-  <button type="submit">Add Contact</button>
-</form>
+<html>
+  <head>
+    <link rel="stylesheet" href="/Content/CSS/style.css" type="text/CSS">
+  </head>
+  <body>
+    @Html.Raw(Model.GetHeaderHTML())
+    <form action="/addContact" method="post" id="addContactForm">
+      <label for="firstName">First Name</label>
+      <input type="text" name="firstName" id="firstName"></input>
+      <label for="lastName">Last Name</label>
+      <input type="text" name="lastName" id="lastName"></input>
+      <label for="phoneNumber">Phone</label>
+      <input type="text" name="phoneNumber" id="phoneNumber"></input>
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email"></input>
+      <label for="address">Address</label>
+      <input type="text" name="address" id="address"></input>
+      <label for="company">Company/Organization</label>
+      <input type="text" name="company" id="company"></input>
+      <label for=""></label>
+      <input type="text" name="" id=""></input>
+      <button type="submit">Add Contact</button>
+    </form>
+    <a href="/clear">Remove All Contacts</a>
+
+    <script src="/Content/JS/scripts.js"></script>
+  </body>
+</html>

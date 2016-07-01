@@ -1,15 +1,13 @@
-@Html.Raw(Model.GetHeaderHTML())
-@Html.Raw(Model.GetContactsHTML())
-@*
-  @foreach (var contact in Model) {
-    <div>
-      <h1>@contact.GetField("firstName") @contact.GetField("lastName")</h1>
-      <h2>Phone: @contact.GetField("phoneNumber")</h2>
-      <h2>Email: @contact.GetField("email")</h2>
-      <h2>Address: @contact.GetField("address")</h2>
-      <h2>Company: @contact.GetField("company")</h2>
-    </div>
-  }
-*@
-<a href="/goToForm">Add Contact</a>
-<a href="/clear">Remove All Contacts</a>
+<html>
+  <head>
+    <link rel="stylesheet" href="/Content/CSS/style.css" type="text/CSS">
+  </head>
+  <body>
+    @Html.Raw(Model.GetHeaderHTML())
+    @Html.Raw(Model.GetContactsHTML())
+    <a href="/goToForm">Add Contact</a>
+    <a href="/clear">Remove All Contacts</a>
+
+    <script src="/Content/JS/scripts.js"></script>
+  </body>
+</html>
