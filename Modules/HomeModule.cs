@@ -34,6 +34,7 @@ namespace ContactList
           Request.Form["company"],
           Request.Form["group"]
           );
+        Group.IfNotContainsThenAdd(Request.Form["group"]);
         Contact newContact = new Contact(newInput.GetFormFields());
         List<Contact> allContacts = Contact.GetAllContacts();
         Display newDisplay = new Display();

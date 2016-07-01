@@ -20,5 +20,12 @@ namespace ContactList.Objects
     {
       _definedGroups.Add(groupName);
     }
+    public static void IfNotContainsThenAdd(string groupName)
+    {
+      if (!_definedGroups.Contains(groupName))
+      {
+        _definedGroups.Add(groupName);
+      }
+    }
   }
 }
