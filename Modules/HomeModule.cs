@@ -46,10 +46,12 @@ namespace ContactList
         Display newDisplay = new Display();
         return View["contacts.cshtml", newDisplay];
       };
-      // Post["/addGroup"] = _ => {
-      //   Group.AddDefinedGroup(Request.Form["newGroup"]);
-      //   return true;
-      // };
+      Post["/sortByGroup"] = _ => {
+        Display.setSTATE("showByGroup");
+        Group.SetGroupSortHTML(Request.Form["sortByGroup"]);
+        Display newDisplay = new Display();
+        return View["contacts.cshtml", newDisplay];
+      };
 
     }
   }

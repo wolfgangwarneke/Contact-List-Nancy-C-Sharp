@@ -5,10 +5,24 @@
   </head>
   <body>
     @Html.Raw(Model.GetHeaderHTML())
-    @Html.Raw(Model.GetContactsHTML())
+
+    @if (Model.getSTATE() == "showAll") {
+      @Html.Raw(Model.GetContactsHTML())
+    } else if (Model.getSTATE() == "showByGroup") {
+      <H1>SUCCESS</H1>
+      @*@Html.Raw(Model.GetSortByGroupsHTML())*@
+    }
+
+    <a href="/viewContacts">View All Contacts</a>
     <a href="/goToForm">Add Contact</a>
     <a href="/clear">Remove All Contacts</a>
 
+    <form action="/sortByGroup" method="post" name="groupsort">
+      <select name="group" id="sortByGroup">
+        <option selected disabled>Sort by Group</option>
+        @Html.Raw(Model.GetGroupOptionsHTML())
+      </select>
+    </form>
 
     <script src="/Content/JS/scripts.js"></script>
   </body>
