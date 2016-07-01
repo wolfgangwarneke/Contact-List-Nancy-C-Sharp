@@ -33,6 +33,11 @@ namespace ContactList
         List<Contact> allContacts = Contact.GetAllContacts();
         return View["contacts.cshtml", allContacts];
       };
+      Get["/clear"] = _ => {
+        Contact.RemoveAllContacts();
+        List<Contact> allContacts = Contact.GetAllContacts();
+        return View["contacts.cshtml", allContacts];
+      };
     }
   }
 }

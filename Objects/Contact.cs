@@ -37,5 +37,10 @@ namespace ContactList.Objects
       return _contactData[key];
     }
 
+    public static void RemoveAllContacts()
+    {
+      _allContacts.Clear();
+    }
+
   }
 }
