@@ -9,8 +9,7 @@
     @if (Model.getSTATE() == "showAll") {
       @Html.Raw(Model.GetContactsHTML())
     } else if (Model.getSTATE() == "showByGroup") {
-      <H1>SUCCESS</H1>
-      @*@Html.Raw(Model.GetSortByGroupsHTML())*@
+      @Html.Raw(Model.GetSortByGroupsHTML())
     }
 
     <a href="/viewContacts">View All Contacts</a>

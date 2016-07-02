@@ -48,7 +48,7 @@ namespace ContactList
       };
       Post["/sortByGroup"] = _ => {
         Display.setSTATE("showByGroup");
-        Group.SetGroupSortHTML(Request.Form["sortByGroup"]);
+        Group.SetGroupSortHTML("work");
         Display newDisplay = new Display();
         return View["contacts.cshtml", newDisplay];
       };
